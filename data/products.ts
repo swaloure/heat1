@@ -1,0 +1,459 @@
+import type { Product } from "@/types"
+
+export const products: Product[] = [
+  // ========== CHEMISTRY ==========
+  {
+    id: "chem-001", slug: "caustic-soda", categoryId: "chemistry",
+    name: { ru: "Каустическая сода (NaOH)", kz: "Каустикалық сода (NaOH)", en: "Caustic Soda (NaOH)" },
+    shortDescription: { ru: "Щёлочь для металлургии и переработки", kz: "Металлургия және қайта өңдеуге арналған сілті", en: "Alkali for metallurgy and processing" },
+    description: { ru: "Натрий гидроксид (каустическая сода) — сильная щёлочь, широко применяемая в горнодобывающей и перерабатывающей промышленности для регулирования pH, выщелачивания руд и обработки сточных вод.", kz: "Натрий гидроксиді (каустикалық сода) — тау-кен және қайта өңдеу өнеркәсібінде pH реттеу, кендерді сілтілеу және ағынды суларды тазарту үшін кеңінен қолданылатын күшті сілті.", en: "Sodium hydroxide (caustic soda) — a strong alkali widely used in mining and processing industries for pH regulation, ore leaching and wastewater treatment." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "NaOH", kz: "NaOH", en: "NaOH" } },
+      { label: { ru: "Концентрация", kz: "Концентрация", en: "Concentration" }, value: { ru: "45-99%", kz: "45-99%", en: "45-99%" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 25 кг, бочки", kz: "25 кг қаптар, бөшкелер", en: "25 kg bags, barrels" } },
+    ],
+    tags: ["щёлочь", "химия", "NaOH", "каустик"], image: "/images/products/caustic-soda.jpg",
+  },
+  {
+    id: "chem-002", slug: "soda-ash", categoryId: "chemistry",
+    name: { ru: "Кальцинированная сода (Na2CO3)", kz: "Кальцинирленген сода (Na2CO3)", en: "Soda Ash (Na2CO3)" },
+    shortDescription: { ru: "Карбонат натрия для промышленного применения", kz: "Өнеркәсіптік қолдануға арналған натрий карбонаты", en: "Sodium carbonate for industrial use" },
+    description: { ru: "Кальцинированная сода — важный химический реагент, используемый в стекольной, металлургической и химической промышленности.", kz: "Кальцинирленген сода — шыны, металлургия және химия өнеркәсібінде қолданылатын маңызды химиялық реагент.", en: "Soda ash — an important chemical reagent used in glass, metallurgical and chemical industries." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "Na2CO3", kz: "Na2CO3", en: "Na2CO3" } },
+      { label: { ru: "Сорт", kz: "Сорт", en: "Grade" }, value: { ru: "Технический, 1 сорт", kz: "Техникалық, 1 сорт", en: "Technical, Grade 1" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 50 кг", kz: "50 кг қаптар", en: "50 kg bags" } },
+    ],
+    tags: ["сода", "химия", "Na2CO3"], image: "/images/products/soda-ash.jpg",
+  },
+  {
+    id: "chem-003", slug: "sodium-cyanide", categoryId: "chemistry",
+    name: { ru: "Цианид натрия (NaCN)", kz: "Натрий цианиді (NaCN)", en: "Sodium Cyanide (NaCN)" },
+    shortDescription: { ru: "Реагент для золотодобычи", kz: "Алтын өндіруге арналған реагент", en: "Reagent for gold mining" },
+    description: { ru: "Цианид натрия — ключевой реагент в процессе цианирования для извлечения золота из руд. Поставляется в соответствии с международными стандартами безопасности.", kz: "Натрий цианиді — кендерден алтын алу үшін цианидтеу процесіндегі негізгі реагент. Халықаралық қауіпсіздік стандарттарына сәйкес жеткізіледі.", en: "Sodium cyanide — a key reagent in the cyanidation process for gold extraction from ores. Supplied in accordance with international safety standards." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "NaCN", kz: "NaCN", en: "NaCN" } },
+      { label: { ru: "Форма", kz: "Форма", en: "Form" }, value: { ru: "Брикеты, раствор", kz: "Брикеттер, ерітінді", en: "Briquettes, solution" } },
+      { label: { ru: "Чистота", kz: "Тазалық", en: "Purity" }, value: { ru: "98%+", kz: "98%+", en: "98%+" } },
+    ],
+    tags: ["цианид", "золото", "NaCN", "реагент"], image: "/images/products/sodium-cyanide.jpg",
+  },
+  {
+    id: "chem-004", slug: "xanthates", categoryId: "chemistry",
+    name: { ru: "Ксантогенаты", kz: "Ксантогенаттар", en: "Xanthates" },
+    shortDescription: { ru: "Флотореагенты-собиратели для обогащения руд", kz: "Кендерді байытуға арналған флотореагенттер-жинағыштар", en: "Flotation collectors for ore enrichment" },
+    description: { ru: "Ксантогенаты — эффективные флотореагенты-собиратели, используемые при флотации сульфидных руд цветных и благородных металлов.", kz: "Ксантогенаттар — түсті және бағалы металдардың сульфидті кендерін флотациялау кезінде қолданылатын тиімді флотореагенттер-жинағыштар.", en: "Xanthates — effective flotation collectors used in flotation of sulfide ores of non-ferrous and precious metals." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Бутиловый, этиловый, изопропиловый", kz: "Бутил, этил, изопропил", en: "Butyl, ethyl, isopropyl" } },
+      { label: { ru: "Форма", kz: "Форма", en: "Form" }, value: { ru: "Порошок, гранулы", kz: "Ұнтақ, түйіршіктер", en: "Powder, granules" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 25-50 кг", kz: "25-50 кг қаптар", en: "25-50 kg bags" } },
+    ],
+    tags: ["ксантогенат", "флотореагент", "собиратель"], image: "/images/products/xanthates.jpg",
+  },
+  {
+    id: "chem-005", slug: "activated-carbon", categoryId: "chemistry",
+    name: { ru: "Активированный уголь", kz: "Белсендірілген көмір", en: "Activated Carbon" },
+    shortDescription: { ru: "Для извлечения золота методом CIP/CIL", kz: "CIP/CIL әдісімен алтын алуға арналған", en: "For gold recovery by CIP/CIL method" },
+    description: { ru: "Высококачественный активированный уголь на основе кокосовой скорлупы для процессов сорбции золота из цианидных растворов.", kz: "Цианидті ерітінділерден алтынды сорбциялау процестері үшін кокос қабығы негізіндегі жоғары сапалы белсендірілген көмір.", en: "High-quality coconut shell-based activated carbon for gold sorption from cyanide solutions." },
+    specs: [
+      { label: { ru: "Основа", kz: "Негіз", en: "Base" }, value: { ru: "Кокосовая скорлупа", kz: "Кокос қабығы", en: "Coconut shell" } },
+      { label: { ru: "Размер частиц", kz: "Бөлшек өлшемі", en: "Particle size" }, value: { ru: "6x12 mesh, 8x16 mesh", kz: "6x12 mesh, 8x16 mesh", en: "6x12 mesh, 8x16 mesh" } },
+      { label: { ru: "Йодное число", kz: "Йод саны", en: "Iodine number" }, value: { ru: "≥1050 мг/г", kz: "≥1050 мг/г", en: "≥1050 mg/g" } },
+    ],
+    tags: ["уголь", "активированный", "CIP", "CIL", "золото"], image: "/images/products/activated-carbon.jpg",
+  },
+  {
+    id: "chem-006", slug: "thiourea", categoryId: "chemistry",
+    name: { ru: "Тиомочевина", kz: "Тиомочевина", en: "Thiourea" },
+    shortDescription: { ru: "Альтернативный реагент для выщелачивания золота", kz: "Алтынды сілтілеуге арналған балама реагент", en: "Alternative reagent for gold leaching" },
+    description: { ru: "Тиомочевина используется как альтернатива цианиду в процессах выщелачивания золота из руд и концентратов.", kz: "Тиомочевина кендер мен концентраттардан алтынды сілтілеу процестерінде цианидтің баламасы ретінде қолданылады.", en: "Thiourea is used as an alternative to cyanide in gold leaching from ores and concentrates." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "CH4N2S", kz: "CH4N2S", en: "CH4N2S" } },
+      { label: { ru: "Чистота", kz: "Тазалық", en: "Purity" }, value: { ru: "99%+", kz: "99%+", en: "99%+" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 25 кг", kz: "25 кг қаптар", en: "25 kg bags" } },
+    ],
+    tags: ["тиомочевина", "золото", "реагент"], image: "/images/products/thiourea.jpg",
+  },
+  {
+    id: "chem-007", slug: "ion-exchange-resins", categoryId: "chemistry",
+    name: { ru: "Ионообменные смолы", kz: "Иондалмалы шайырлар", en: "Ion Exchange Resins" },
+    shortDescription: { ru: "Для извлечения золота и урана", kz: "Алтын мен уран алу үшін", en: "For gold and uranium extraction" },
+    description: { ru: "Специализированные ионообменные смолы для извлечения золота, урана и других ценных металлов из растворов.", kz: "Ерітінділерден алтын, уран және басқа бағалы металдарды алуға арналған мамандандырылған иондалмалы шайырлар.", en: "Specialized ion exchange resins for extraction of gold, uranium and other precious metals from solutions." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Анионообменные, сильноосновные", kz: "Аниондалмалы, күшті негізді", en: "Anion exchange, strong base" } },
+      { label: { ru: "Применение", kz: "Қолдану", en: "Application" }, value: { ru: "Золото, уран", kz: "Алтын, уран", en: "Gold, uranium" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 25 л", kz: "25 л қаптар", en: "25 L bags" } },
+    ],
+    tags: ["ионообменные", "смолы", "золото", "уран"], image: "/images/products/ion-resins.jpg",
+  },
+  {
+    id: "chem-008", slug: "copper-sulfate", categoryId: "chemistry",
+    name: { ru: "Медный купорос (CuSO4)", kz: "Мыс купоросы (CuSO4)", en: "Copper Sulfate (CuSO4)" },
+    shortDescription: { ru: "Активатор флотации сульфидных минералов", kz: "Сульфидті минералдарды флотациялау белсендіргіші", en: "Activator for sulfide mineral flotation" },
+    description: { ru: "Медный купорос — важный активатор при флотации сфалерита и других сульфидных минералов в горнодобывающей промышленности.", kz: "Мыс купоросы — тау-кен өнеркәсібінде сфалерит пен басқа сульфидті минералдарды флотациялау кезіндегі маңызды белсендіргіш.", en: "Copper sulfate — an important activator in flotation of sphalerite and other sulfide minerals in mining." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "CuSO4·5H2O", kz: "CuSO4·5H2O", en: "CuSO4·5H2O" } },
+      { label: { ru: "Содержание Cu", kz: "Cu құрамы", en: "Cu content" }, value: { ru: "≥24.5%", kz: "≥24.5%", en: "≥24.5%" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 25/50 кг", kz: "25/50 кг қаптар", en: "25/50 kg bags" } },
+    ],
+    tags: ["купорос", "медь", "флотация", "CuSO4"], image: "/images/products/copper-sulfate.jpg",
+  },
+  {
+    id: "chem-009", slug: "sodium-metabisulfite", categoryId: "chemistry",
+    name: { ru: "Метабисульфит натрия", kz: "Натрий метабисульфиті", en: "Sodium Metabisulfite" },
+    shortDescription: { ru: "Восстановитель и антиоксидант для промышленности", kz: "Өнеркәсіп үшін тотықсыздандырғыш және антиоксидант", en: "Reducing agent and antioxidant for industry" },
+    description: { ru: "Метабисульфит натрия используется как восстановитель в процессах очистки сточных вод и при обработке руд.", kz: "Натрий метабисульфиті ағынды суларды тазарту және кендерді өңдеу процестерінде тотықсыздандырғыш ретінде қолданылады.", en: "Sodium metabisulfite is used as a reducing agent in wastewater treatment and ore processing." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "Na2S2O5", kz: "Na2S2O5", en: "Na2S2O5" } },
+      { label: { ru: "Чистота", kz: "Тазалық", en: "Purity" }, value: { ru: "97%+", kz: "97%+", en: "97%+" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Мешки 25 кг", kz: "25 кг қаптар", en: "25 kg bags" } },
+    ],
+    tags: ["метабисульфит", "натрий", "восстановитель"], image: "/images/products/sodium-metabisulfite.jpg",
+  },
+  {
+    id: "chem-010", slug: "hydrogen-peroxide", categoryId: "chemistry",
+    name: { ru: "Перекись водорода (H2O2)", kz: "Сутегі асқын тотығы (H2O2)", en: "Hydrogen Peroxide (H2O2)" },
+    shortDescription: { ru: "Окислитель для промышленного применения", kz: "Өнеркәсіптік қолдануға арналған тотықтырғыш", en: "Oxidizer for industrial use" },
+    description: { ru: "Перекись водорода — универсальный окислитель для обработки руд, очистки воды и других промышленных процессов.", kz: "Сутегі асқын тотығы — кендерді өңдеу, суды тазарту және басқа өнеркәсіптік процестерге арналған әмбебап тотықтырғыш.", en: "Hydrogen peroxide — a universal oxidizer for ore processing, water treatment and other industrial processes." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "H2O2", kz: "H2O2", en: "H2O2" } },
+      { label: { ru: "Концентрация", kz: "Концентрация", en: "Concentration" }, value: { ru: "35-60%", kz: "35-60%", en: "35-60%" } },
+      { label: { ru: "Упаковка", kz: "Орама", en: "Packaging" }, value: { ru: "Канистры, еврокубы", kz: "Канистрлар, еврокубтар", en: "Canisters, IBC containers" } },
+    ],
+    tags: ["перекись", "окислитель", "H2O2"], image: "/images/products/hydrogen-peroxide.jpg",
+  },
+  {
+    id: "chem-011", slug: "flotation-reagents", categoryId: "chemistry",
+    name: { ru: "Флотореагенты и собиратели", kz: "Флотореагенттер мен жинағыштар", en: "Flotation Reagents & Collectors" },
+    shortDescription: { ru: "Комплекс реагентов для флотационного обогащения", kz: "Флотациялық байыту үшін реагенттер кешені", en: "Complex of reagents for flotation enrichment" },
+    description: { ru: "Полный спектр флотационных реагентов: собиратели, пенообразователи, депрессоры и регуляторы для всех типов руд.", kz: "Флотациялық реагенттердің толық спектрі: жинағыштар, көбік түзгіштер, депрессорлар және барлық кен түрлеріне арналған реттегіштер.", en: "Full range of flotation reagents: collectors, frothers, depressants and regulators for all types of ores." },
+    specs: [
+      { label: { ru: "Виды", kz: "Түрлері", en: "Types" }, value: { ru: "Собиратели, пенообразователи, депрессоры", kz: "Жинағыштар, көбік түзгіштер, депрессорлар", en: "Collectors, frothers, depressants" } },
+      { label: { ru: "Применение", kz: "Қолдану", en: "Application" }, value: { ru: "Медь, цинк, свинец, золото", kz: "Мыс, мырыш, қорғасын, алтын", en: "Copper, zinc, lead, gold" } },
+    ],
+    tags: ["флотореагент", "собиратель", "обогащение"], image: "/images/products/flotation-reagents.jpg",
+  },
+  {
+    id: "chem-012", slug: "sodium-hydrosulfite", categoryId: "chemistry",
+    name: { ru: "Гидросульфит натрия", kz: "Натрий гидросульфиті", en: "Sodium Hydrosulfite" },
+    shortDescription: { ru: "Мощный восстановитель для промышленного применения", kz: "Өнеркәсіптік қолдануға арналған күшті тотықсыздандырғыш", en: "Powerful reducing agent for industrial applications" },
+    description: { ru: "Гидросульфит натрия — сильный восстановитель, применяемый в горнодобывающей и текстильной промышленности.", kz: "Натрий гидросульфиті — тау-кен және тоқыма өнеркәсібінде қолданылатын күшті тотықсыздандырғыш.", en: "Sodium hydrosulfite — a strong reducing agent used in mining and textile industries." },
+    specs: [
+      { label: { ru: "Формула", kz: "Формула", en: "Formula" }, value: { ru: "Na2S2O4", kz: "Na2S2O4", en: "Na2S2O4" } },
+      { label: { ru: "Чистота", kz: "Тазалық", en: "Purity" }, value: { ru: "85-90%", kz: "85-90%", en: "85-90%" } },
+    ],
+    tags: ["гидросульфит", "восстановитель", "натрий"], image: "/images/products/sodium-hydrosulfite.jpg",
+  },
+
+  // ========== METALS ==========
+  {
+    id: "met-001", slug: "steel-pipes", categoryId: "metals",
+    name: { ru: "Стальные трубы", kz: "Болат құбырлар", en: "Steel Pipes" },
+    shortDescription: { ru: "Бесшовные и сварные трубы различных диаметров", kz: "Әртүрлі диаметрлі тігіссіз және дәнекерленген құбырлар", en: "Seamless and welded pipes of various diameters" },
+    description: { ru: "Стальные трубы бесшовные и электросварные для промышленного применения. Различные диаметры, толщины стенок и марки стали.", kz: "Өнеркәсіптік қолдануға арналған тігіссіз және электр дәнекерлі болат құбырлар. Әртүрлі диаметрлер, қабырға қалыңдықтары және болат маркалары.", en: "Seamless and electric-welded steel pipes for industrial use. Various diameters, wall thicknesses and steel grades." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Бесшовные, сварные", kz: "Тігіссіз, дәнекерленген", en: "Seamless, welded" } },
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "20-530 мм", kz: "20-530 мм", en: "20-530 mm" } },
+      { label: { ru: "Стандарт", kz: "Стандарт", en: "Standard" }, value: { ru: "ГОСТ 8732, ГОСТ 10704", kz: "ГОСТ 8732, ГОСТ 10704", en: "GOST 8732, GOST 10704" } },
+    ],
+    tags: ["трубы", "сталь", "металлопрокат"], image: "/images/products/steel-pipes.jpg",
+  },
+  {
+    id: "met-002", slug: "steel-sheets", categoryId: "metals",
+    name: { ru: "Стальные листы", kz: "Болат парақтар", en: "Steel Sheets" },
+    shortDescription: { ru: "Горячекатаный и холоднокатаный листовой прокат", kz: "Ыстықтай және суықтай илемделген парақ прокат", en: "Hot-rolled and cold-rolled sheet metal" },
+    description: { ru: "Листовой стальной прокат различных марок и толщин для промышленного применения.", kz: "Өнеркәсіптік қолдануға арналған әртүрлі маркалы және қалыңдықтағы парақ болат прокат.", en: "Steel sheet metal of various grades and thicknesses for industrial applications." },
+    specs: [
+      { label: { ru: "Толщина", kz: "Қалыңдық", en: "Thickness" }, value: { ru: "0.5-200 мм", kz: "0.5-200 мм", en: "0.5-200 mm" } },
+      { label: { ru: "Марка стали", kz: "Болат маркасы", en: "Steel grade" }, value: { ru: "Ст3, 09Г2С, 65Г и др.", kz: "Ст3, 09Г2С, 65Г ж.б.", en: "St3, 09G2S, 65G etc." } },
+    ],
+    tags: ["листы", "сталь", "прокат"], image: "/images/products/steel-sheets.jpg",
+  },
+  {
+    id: "met-003", slug: "ferromanganese", categoryId: "metals",
+    name: { ru: "Ферромарганец", kz: "Ферромарганец", en: "Ferromanganese" },
+    shortDescription: { ru: "Ферросплав для легирования стали", kz: "Болатты легирлеуге арналған ферроқорытпа", en: "Ferroalloy for steel alloying" },
+    description: { ru: "Ферромарганец — ферросплав, используемый в металлургии для раскисления и легирования стали.", kz: "Ферромарганец — металлургияда болатты тотықсыздандыру және легирлеу үшін қолданылатын ферроқорытпа.", en: "Ferromanganese — a ferroalloy used in metallurgy for deoxidation and alloying of steel." },
+    specs: [
+      { label: { ru: "Содержание Mn", kz: "Mn құрамы", en: "Mn content" }, value: { ru: "65-78%", kz: "65-78%", en: "65-78%" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Высокоуглеродистый, среднеуглеродистый", kz: "Жоғары көміртекті, орташа көміртекті", en: "High-carbon, medium-carbon" } },
+    ],
+    tags: ["ферромарганец", "ферросплав", "марганец"], image: "/images/products/ferromanganese.jpg",
+  },
+  {
+    id: "met-004", slug: "ferrochrome", categoryId: "metals",
+    name: { ru: "Феррохром", kz: "Феррохром", en: "Ferrochrome" },
+    shortDescription: { ru: "Ферросплав для производства нержавеющей стали", kz: "Тот баспайтын болат өндіруге арналған ферроқорытпа", en: "Ferroalloy for stainless steel production" },
+    description: { ru: "Феррохром — ключевой ферросплав для производства нержавеющей и легированной стали.", kz: "Феррохром — тот баспайтын және легирленген болат өндіру үшін негізгі ферроқорытпа.", en: "Ferrochrome — a key ferroalloy for the production of stainless and alloyed steel." },
+    specs: [
+      { label: { ru: "Содержание Cr", kz: "Cr құрамы", en: "Cr content" }, value: { ru: "60-72%", kz: "60-72%", en: "60-72%" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Высокоуглеродистый, низкоуглеродистый", kz: "Жоғары көміртекті, төмен көміртекті", en: "High-carbon, low-carbon" } },
+    ],
+    tags: ["феррохром", "ферросплав", "хром"], image: "/images/products/ferrochrome.jpg",
+  },
+  {
+    id: "met-005", slug: "steel-wire-ropes", categoryId: "metals",
+    name: { ru: "Стальные канаты", kz: "Болат арқандар", en: "Steel Wire Ropes" },
+    shortDescription: { ru: "Канаты для горно-шахтного оборудования", kz: "Тау-кен жабдықтары үшін арқандар", en: "Wire ropes for mining equipment" },
+    description: { ru: "Стальные канаты различной конструкции для подъёмных машин, экскаваторов и другого горно-шахтного оборудования.", kz: "Көтеру машиналары, экскаваторлар және басқа тау-кен жабдықтары үшін әртүрлі конструкциядағы болат арқандар.", en: "Steel wire ropes of various constructions for hoisting machines, excavators and other mining equipment." },
+    specs: [
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "6.2-56 мм", kz: "6.2-56 мм", en: "6.2-56 mm" } },
+      { label: { ru: "Конструкция", kz: "Конструкция", en: "Construction" }, value: { ru: "6х19, 6х36, 6х37", kz: "6х19, 6х36, 6х37", en: "6x19, 6x36, 6x37" } },
+      { label: { ru: "Стандарт", kz: "Стандарт", en: "Standard" }, value: { ru: "ГОСТ 2688, ГОСТ 7668", kz: "ГОСТ 2688, ГОСТ 7668", en: "GOST 2688, GOST 7668" } },
+    ],
+    tags: ["канат", "стальной", "горное"], image: "/images/products/wire-ropes.jpg",
+  },
+  {
+    id: "met-006", slug: "nickel", categoryId: "metals",
+    name: { ru: "Никель", kz: "Никель", en: "Nickel" },
+    shortDescription: { ru: "Никель катодный и электролитический", kz: "Катодты және электролиттік никель", en: "Cathodic and electrolytic nickel" },
+    description: { ru: "Никель высокой чистоты для легирования стали, производства сплавов и электрохимических процессов.", kz: "Болатты легирлеу, қорытпалар өндіру және электрохимиялық процестер үшін жоғары тазалықтағы никель.", en: "High-purity nickel for steel alloying, alloy production and electrochemical processes." },
+    specs: [
+      { label: { ru: "Марка", kz: "Маркасы", en: "Grade" }, value: { ru: "Н-1, Н-2, Н-3", kz: "Н-1, Н-2, Н-3", en: "N-1, N-2, N-3" } },
+      { label: { ru: "Чистота Ni", kz: "Ni тазалығы", en: "Ni purity" }, value: { ru: "≥99.0%", kz: "≥99.0%", en: "≥99.0%" } },
+    ],
+    tags: ["никель", "катодный", "электролитический"], image: "/images/products/nickel.jpg",
+  },
+  {
+    id: "met-007", slug: "aluminum-sheets", categoryId: "metals",
+    name: { ru: "Алюминиевые листы", kz: "Алюминий парақтар", en: "Aluminum Sheets" },
+    shortDescription: { ru: "Листы и плиты из алюминиевых сплавов", kz: "Алюминий қорытпаларынан жасалған парақтар мен плиталар", en: "Sheets and plates from aluminum alloys" },
+    description: { ru: "Алюминиевые листы и плиты различных марок и размеров для промышленного применения.", kz: "Өнеркәсіптік қолдануға арналған әртүрлі маркалы және өлшемді алюминий парақтар мен плиталар.", en: "Aluminum sheets and plates of various grades and sizes for industrial applications." },
+    specs: [
+      { label: { ru: "Сплав", kz: "Қорытпа", en: "Alloy" }, value: { ru: "АМц, АМг2, АД1, Д16", kz: "АМц, АМг2, АД1, Д16", en: "AMts, AMg2, AD1, D16" } },
+      { label: { ru: "Толщина", kz: "Қалыңдық", en: "Thickness" }, value: { ru: "0.5-150 мм", kz: "0.5-150 мм", en: "0.5-150 mm" } },
+    ],
+    tags: ["алюминий", "листы", "плиты"], image: "/images/products/aluminum-sheets.jpg",
+  },
+  {
+    id: "met-008", slug: "graphite-electrodes", categoryId: "metals",
+    name: { ru: "Графитированные электроды", kz: "Графиттелген электродтар", en: "Graphite Electrodes" },
+    shortDescription: { ru: "Для электродуговых печей", kz: "Электр доғалы пештер үшін", en: "For electric arc furnaces" },
+    description: { ru: "Графитированные электроды высокого качества для электродуговых сталеплавильных печей.", kz: "Электр доғалы болат балқыту пештеріне арналған жоғары сапалы графиттелген электродтар.", en: "High-quality graphite electrodes for electric arc steelmaking furnaces." },
+    specs: [
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "200-700 мм", kz: "200-700 мм", en: "200-700 mm" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "UHP, HP, RP", kz: "UHP, HP, RP", en: "UHP, HP, RP" } },
+      { label: { ru: "Длина", kz: "Ұзындық", en: "Length" }, value: { ru: "1500-2700 мм", kz: "1500-2700 мм", en: "1500-2700 mm" } },
+    ],
+    tags: ["электрод", "графит", "печь"], image: "/images/products/graphite-electrodes.jpg",
+  },
+  {
+    id: "met-009", slug: "steel-circles", categoryId: "metals",
+    name: { ru: "Круги стальные", kz: "Болат дөңгелектер", en: "Steel Rounds" },
+    shortDescription: { ru: "Круглый стальной прокат различных марок", kz: "Әртүрлі маркалы дөңгелек болат прокат", en: "Round steel bars of various grades" },
+    description: { ru: "Стальные круги (круглый прокат) для изготовления деталей машин и механизмов.", kz: "Машина мен механизм бөлшектерін жасауға арналған болат дөңгелектер (дөңгелек прокат).", en: "Steel rounds (round bars) for manufacturing machine parts and mechanisms." },
+    specs: [
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "10-300 мм", kz: "10-300 мм", en: "10-300 mm" } },
+      { label: { ru: "Марка стали", kz: "Болат маркасы", en: "Steel grade" }, value: { ru: "20, 45, 40Х, 30ХГСА", kz: "20, 45, 40Х, 30ХГСА", en: "20, 45, 40X, 30XGSA" } },
+    ],
+    tags: ["круг", "сталь", "прокат", "круглый"], image: "/images/products/steel-circles.jpg",
+  },
+  {
+    id: "met-010", slug: "ferrotitanium", categoryId: "metals",
+    name: { ru: "Ферротитан", kz: "Ферротитан", en: "Ferrotitanium" },
+    shortDescription: { ru: "Ферросплав для микролегирования стали", kz: "Болатты микролегирлеуге арналған ферроқорытпа", en: "Ferroalloy for steel microalloying" },
+    description: { ru: "Ферротитан используется для микролегирования и раскисления стали, улучшая её механические свойства.", kz: "Ферротитан болаттың механикалық қасиеттерін жақсарта отырып, микролегирлеу және тотықсыздандыру үшін қолданылады.", en: "Ferrotitanium is used for microalloying and deoxidation of steel, improving its mechanical properties." },
+    specs: [
+      { label: { ru: "Содержание Ti", kz: "Ti құрамы", en: "Ti content" }, value: { ru: "25-70%", kz: "25-70%", en: "25-70%" } },
+      { label: { ru: "Фракция", kz: "Фракция", en: "Fraction" }, value: { ru: "0-50 мм", kz: "0-50 мм", en: "0-50 mm" } },
+    ],
+    tags: ["ферротитан", "ферросплав", "титан"], image: "/images/products/ferrotitanium.jpg",
+  },
+  {
+    id: "met-011", slug: "ferrovanadium", categoryId: "metals",
+    name: { ru: "Феррованадий", kz: "Феррованадий", en: "Ferrovanadium" },
+    shortDescription: { ru: "Ферросплав для высокопрочной стали", kz: "Жоғары берік болат үшін ферроқорытпа", en: "Ferroalloy for high-strength steel" },
+    description: { ru: "Феррованадий применяется для производства высокопрочных и инструментальных сталей.", kz: "Феррованадий жоғары берік және аспаптық болаттар өндіру үшін қолданылады.", en: "Ferrovanadium is used for production of high-strength and tool steels." },
+    specs: [
+      { label: { ru: "Содержание V", kz: "V құрамы", en: "V content" }, value: { ru: "50-80%", kz: "50-80%", en: "50-80%" } },
+    ],
+    tags: ["феррованадий", "ферросплав", "ванадий"], image: "/images/products/ferrovanadium.jpg",
+  },
+  {
+    id: "met-012", slug: "steel-shot", categoryId: "metals",
+    name: { ru: "Стальная дробь", kz: "Болат дробь", en: "Steel Shot" },
+    shortDescription: { ru: "Для дробеструйной обработки поверхностей", kz: "Беттерді дробьпен өңдеуге арналған", en: "For shot blasting surface treatment" },
+    description: { ru: "Стальная дробь для очистки и упрочнения поверхностей методом дробеструйной обработки.", kz: "Дробьпен өңдеу әдісімен беттерді тазалау және беріктендіру үшін болат дробь.", en: "Steel shot for cleaning and strengthening surfaces by shot blasting." },
+    specs: [
+      { label: { ru: "Размер", kz: "Өлшемі", en: "Size" }, value: { ru: "S110-S780", kz: "S110-S780", en: "S110-S780" } },
+      { label: { ru: "Твёрдость", kz: "Қаттылық", en: "Hardness" }, value: { ru: "40-55 HRC", kz: "40-55 HRC", en: "40-55 HRC" } },
+    ],
+    tags: ["дробь", "стальная", "дробеструйная"], image: "/images/products/steel-shot.jpg",
+  },
+
+  // ========== EQUIPMENT ==========
+  {
+    id: "eq-001", slug: "pdc-drill-bits", categoryId: "equipment",
+    name: { ru: "Буровые долота PDC", kz: "PDC бұрғылау қашаулары", en: "PDC Drill Bits" },
+    shortDescription: { ru: "Высокоэффективные алмазные долота", kz: "Жоғары тиімді алмас қашаулар", en: "High-performance diamond drill bits" },
+    description: { ru: "Буровые долота с вставками из поликристаллических алмазов (PDC) для бурения скальных пород и руд.", kz: "Жартас жыныстары мен кендерді бұрғылауға арналған поликристалды алмас (PDC) қойылмалы бұрғылау қашаулары.", en: "Drill bits with polycrystalline diamond compact (PDC) inserts for drilling rock formations and ores." },
+    specs: [
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "76-445 мм", kz: "76-445 мм", en: "76-445 mm" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "PDC, трёхшарошечные", kz: "PDC, үш конусты", en: "PDC, tricone" } },
+      { label: { ru: "Применение", kz: "Қолдану", en: "Application" }, value: { ru: "Бурение горных пород", kz: "Тау жыныстарын бұрғылау", en: "Rock drilling" } },
+    ],
+    tags: ["долото", "PDC", "бурение", "алмазное"], image: "/images/products/pdc-drill-bits.jpg",
+  },
+  {
+    id: "eq-002", slug: "drill-rods", categoryId: "equipment",
+    name: { ru: "Буровые штанги и трубы", kz: "Бұрғылау штангалары мен құбырлары", en: "Drill Rods & Pipes" },
+    shortDescription: { ru: "Буровой инструмент для подземного и открытого бурения", kz: "Жерасты және ашық бұрғылауға арналған бұрғылау құралы", en: "Drilling tools for underground and surface drilling" },
+    description: { ru: "Буровые штанги и трубы для бурильных станков, обеспечивающие надёжную передачу крутящего момента и осевой нагрузки.", kz: "Айналу моментін және осьтік жүктемені сенімді беруді қамтамасыз ететін бұрғылау станоктарына арналған бұрғылау штангалары мен құбырлары.", en: "Drill rods and pipes for drilling rigs, ensuring reliable transmission of torque and axial load." },
+    specs: [
+      { label: { ru: "Длина", kz: "Ұзындық", en: "Length" }, value: { ru: "1000-6100 мм", kz: "1000-6100 мм", en: "1000-6100 mm" } },
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "32-89 мм", kz: "32-89 мм", en: "32-89 mm" } },
+      { label: { ru: "Резьба", kz: "Бұрама", en: "Thread" }, value: { ru: "R32, R38, T38, T45", kz: "R32, R38, T38, T45", en: "R32, R38, T38, T45" } },
+    ],
+    tags: ["штанга", "буровая", "труба", "бурение"], image: "/images/products/drill-rods.jpg",
+  },
+  {
+    id: "eq-003", slug: "ball-mills", categoryId: "equipment",
+    name: { ru: "Шаровые мельницы", kz: "Шарлы диірмендер", en: "Ball Mills" },
+    shortDescription: { ru: "Мельницы для измельчения руд и минералов", kz: "Кендер мен минералдарды ұсақтауға арналған диірмендер", en: "Mills for grinding ores and minerals" },
+    description: { ru: "Шаровые мельницы различных типоразмеров для измельчения руд, минералов и других материалов.", kz: "Кендерді, минералдарды және басқа материалдарды ұсақтауға арналған әртүрлі типтегі шарлы диірмендер.", en: "Ball mills of various sizes for grinding ores, minerals and other materials." },
+    specs: [
+      { label: { ru: "Диаметр барабана", kz: "Барабан диаметрі", en: "Drum diameter" }, value: { ru: "900-4500 мм", kz: "900-4500 мм", en: "900-4500 mm" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Мокрый/сухой помол", kz: "Дымқыл/құрғақ ұнтақтау", en: "Wet/dry grinding" } },
+    ],
+    tags: ["мельница", "шаровая", "измельчение"], image: "/images/products/ball-mills.jpg",
+  },
+  {
+    id: "eq-004", slug: "crushers", categoryId: "equipment",
+    name: { ru: "Дробилки", kz: "Уатқыштар", en: "Crushers" },
+    shortDescription: { ru: "Щековые, конусные и молотковые дробилки", kz: "Жақты, конусты және балғалы уатқыштар", en: "Jaw, cone and hammer crushers" },
+    description: { ru: "Дробильное оборудование для первичного, вторичного и третичного дробления горных пород и руд.", kz: "Тау жыныстары мен кендерді бастапқы, қайталама және үшінші уатуға арналған уату жабдықтары.", en: "Crushing equipment for primary, secondary and tertiary crushing of rocks and ores." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Щековые, конусные, молотковые", kz: "Жақты, конусты, балғалы", en: "Jaw, cone, hammer" } },
+      { label: { ru: "Производительность", kz: "Өнімділік", en: "Capacity" }, value: { ru: "5-1500 т/ч", kz: "5-1500 т/сағ", en: "5-1500 t/h" } },
+    ],
+    tags: ["дробилка", "щековая", "конусная", "дробление"], image: "/images/products/crushers.jpg",
+  },
+  {
+    id: "eq-005", slug: "filter-presses", categoryId: "equipment",
+    name: { ru: "Фильтр-прессы", kz: "Сүзгі-престер", en: "Filter Presses" },
+    shortDescription: { ru: "Фильтрационное оборудование для разделения суспензий", kz: "Суспензияларды бөлуге арналған сүзу жабдықтары", en: "Filtration equipment for suspension separation" },
+    description: { ru: "Камерные и мембранные фильтр-прессы для обезвоживания шламов, хвостов и концентратов.", kz: "Шламдарды, құйрықтарды және концентраттарды сусыздандыруға арналған камералық және мембраналық сүзгі-престер.", en: "Chamber and membrane filter presses for dewatering slurries, tailings and concentrates." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Камерные, мембранные", kz: "Камералық, мембраналық", en: "Chamber, membrane" } },
+      { label: { ru: "Площадь фильтрации", kz: "Сүзу ауданы", en: "Filter area" }, value: { ru: "10-800 м²", kz: "10-800 м²", en: "10-800 m²" } },
+    ],
+    tags: ["фильтр-пресс", "фильтрация", "обезвоживание"], image: "/images/products/filter-presses.jpg",
+  },
+  {
+    id: "eq-006", slug: "pumps", categoryId: "equipment",
+    name: { ru: "Насосы промышленные", kz: "Өнеркәсіптік сорғылар", en: "Industrial Pumps" },
+    shortDescription: { ru: "Шламовые, центробежные и погружные насосы", kz: "Шламды, ортадан тепкіш және батырмалы сорғылар", en: "Slurry, centrifugal and submersible pumps" },
+    description: { ru: "Промышленные насосы для перекачки пульп, шламов, агрессивных жидкостей и воды.", kz: "Пульпаларды, шламдарды, агрессивті сұйықтықтарды және суды айдауға арналған өнеркәсіптік сорғылар.", en: "Industrial pumps for pumping pulps, slurries, aggressive liquids and water." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Шламовые, центробежные, погружные", kz: "Шламды, ортадан тепкіш, батырмалы", en: "Slurry, centrifugal, submersible" } },
+      { label: { ru: "Подача", kz: "Беру", en: "Flow rate" }, value: { ru: "до 10 000 м³/ч", kz: "10 000 м³/сағ дейін", en: "up to 10,000 m³/h" } },
+    ],
+    tags: ["насос", "шламовый", "центробежный"], image: "/images/products/pumps.jpg",
+  },
+  {
+    id: "eq-007", slug: "conveyor-belts", categoryId: "equipment",
+    name: { ru: "Конвейерные ленты", kz: "Конвейерлік таспалар", en: "Conveyor Belts" },
+    shortDescription: { ru: "Резинотканевые и резинотросовые ленты", kz: "Резина-мата және резина-арқанды таспалар", en: "Rubber-fabric and steel cord belts" },
+    description: { ru: "Конвейерные ленты для транспортировки руд, угля, щебня и других сыпучих материалов.", kz: "Кендерді, көмірді, қиыршық тасты және басқа құйма материалдарды тасымалдауға арналған конвейерлік таспалар.", en: "Conveyor belts for transportation of ores, coal, crushed stone and other bulk materials." },
+    specs: [
+      { label: { ru: "Ширина", kz: "Ені", en: "Width" }, value: { ru: "500-2000 мм", kz: "500-2000 мм", en: "500-2000 mm" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "2Т, 3Т, БКНЛ, РТЛ", kz: "2Т, 3Т, БКНЛ, РТЛ", en: "2T, 3T, BKNL, RTL" } },
+      { label: { ru: "Прочность", kz: "Беріктік", en: "Strength" }, value: { ru: "100-3150 Н/мм", kz: "100-3150 Н/мм", en: "100-3150 N/mm" } },
+    ],
+    tags: ["конвейер", "лента", "транспортировка"], image: "/images/products/conveyor-belts.jpg",
+  },
+  {
+    id: "eq-008", slug: "otr-tires", categoryId: "equipment",
+    name: { ru: "Шины КГШ (крупногабаритные)", kz: "ІМШ (ірі мөлшерлі) шиналар", en: "OTR Tires" },
+    shortDescription: { ru: "Шины для карьерной и горной техники", kz: "Карьерлік және тау-кен техникасы үшін шиналар", en: "Tires for quarry and mining equipment" },
+    description: { ru: "Крупногабаритные шины для самосвалов, погрузчиков, грейдеров и другой карьерной техники.", kz: "Өздігінен түсіргіштер, тиегіштер, грейдерлер және басқа карьерлік техника үшін ірі мөлшерлі шиналар.", en: "Large-size tires for dump trucks, loaders, graders and other quarry equipment." },
+    specs: [
+      { label: { ru: "Размеры", kz: "Өлшемдер", en: "Sizes" }, value: { ru: "17.5R25 — 46/90R57", kz: "17.5R25 — 46/90R57", en: "17.5R25 — 46/90R57" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Радиальные, диагональные", kz: "Радиалды, диагоналды", en: "Radial, bias" } },
+    ],
+    tags: ["шины", "КГШ", "карьер", "горная техника"], image: "/images/products/otr-tires.jpg",
+  },
+  {
+    id: "eq-009", slug: "grinding-balls", categoryId: "equipment",
+    name: { ru: "Стальные и керамические шары", kz: "Болат және керамикалық шарлар", en: "Steel & Ceramic Grinding Balls" },
+    shortDescription: { ru: "Мелющие тела для шаровых мельниц", kz: "Шарлы диірмендерге арналған ұнтақтағыш денелер", en: "Grinding media for ball mills" },
+    description: { ru: "Мелющие шары из стали и керамики различных диаметров для шаровых и стержневых мельниц.", kz: "Шарлы және стержень диірмендеріне арналған әртүрлі диаметрлі болат пен керамикадан жасалған ұнтақтағыш шарлар.", en: "Steel and ceramic grinding balls of various diameters for ball and rod mills." },
+    specs: [
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "20-120 мм", kz: "20-120 мм", en: "20-120 mm" } },
+      { label: { ru: "Твёрдость", kz: "Қаттылық", en: "Hardness" }, value: { ru: "58-65 HRC (сталь)", kz: "58-65 HRC (болат)", en: "58-65 HRC (steel)" } },
+      { label: { ru: "Материал", kz: "Материал", en: "Material" }, value: { ru: "Сталь, керамика", kz: "Болат, керамика", en: "Steel, ceramic" } },
+    ],
+    tags: ["шары", "мелющие", "мельница", "стальные"], image: "/images/products/grinding-balls.jpg",
+  },
+  {
+    id: "eq-010", slug: "electric-motors", categoryId: "equipment",
+    name: { ru: "Электродвигатели", kz: "Электр қозғалтқыштар", en: "Electric Motors" },
+    shortDescription: { ru: "Промышленные электродвигатели различной мощности", kz: "Әртүрлі қуаттылықтағы өнеркәсіптік электр қозғалтқыштар", en: "Industrial electric motors of various power" },
+    description: { ru: "Асинхронные и взрывозащищённые электродвигатели для промышленного оборудования.", kz: "Өнеркәсіптік жабдықтарға арналған асинхронды және жарылыстан қорғалған электр қозғалтқыштар.", en: "Asynchronous and explosion-proof electric motors for industrial equipment." },
+    specs: [
+      { label: { ru: "Мощность", kz: "Қуат", en: "Power" }, value: { ru: "0.18-630 кВт", kz: "0.18-630 кВт", en: "0.18-630 kW" } },
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "АИР, ВАО, 4АМ", kz: "АИР, ВАО, 4АМ", en: "AIR, VAO, 4AM" } },
+      { label: { ru: "Защита", kz: "Қорғаныс", en: "Protection" }, value: { ru: "IP54, IP55, Ex", kz: "IP54, IP55, Ex", en: "IP54, IP55, Ex" } },
+    ],
+    tags: ["электродвигатель", "мотор", "двигатель"], image: "/images/products/electric-motors.jpg",
+  },
+  {
+    id: "eq-011", slug: "compressors", categoryId: "equipment",
+    name: { ru: "Компрессоры", kz: "Компрессорлар", en: "Compressors" },
+    shortDescription: { ru: "Винтовые и поршневые компрессоры", kz: "Бұрандалы және поршеньді компрессорлар", en: "Screw and piston compressors" },
+    description: { ru: "Промышленные компрессоры для подачи сжатого воздуха на горнодобывающие и перерабатывающие предприятия.", kz: "Тау-кен және қайта өңдеу кәсіпорындарына сығылған ауа беруге арналған өнеркәсіптік компрессорлар.", en: "Industrial compressors for supplying compressed air to mining and processing plants." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Винтовые, поршневые", kz: "Бұрандалы, поршеньді", en: "Screw, piston" } },
+      { label: { ru: "Производительность", kz: "Өнімділік", en: "Capacity" }, value: { ru: "0.5-60 м³/мин", kz: "0.5-60 м³/мин", en: "0.5-60 m³/min" } },
+      { label: { ru: "Давление", kz: "Қысым", en: "Pressure" }, value: { ru: "7-25 бар", kz: "7-25 бар", en: "7-25 bar" } },
+    ],
+    tags: ["компрессор", "винтовой", "сжатый воздух"], image: "/images/products/compressors.jpg",
+  },
+  {
+    id: "eq-012", slug: "gear-rims", categoryId: "equipment",
+    name: { ru: "Зубчатые венцы", kz: "Тісті тәждер", en: "Gear Rims" },
+    shortDescription: { ru: "Зубчатые венцы для мельниц и вращающихся печей", kz: "Диірмендер мен айналмалы пештерге арналған тісті тәждер", en: "Gear rims for mills and rotary kilns" },
+    description: { ru: "Зубчатые венцы из легированной стали для шаровых мельниц, барабанных печей и другого вращающегося оборудования.", kz: "Шарлы диірмендерге, барабанды пештерге және басқа айналмалы жабдықтарға арналған легирленген болаттан жасалған тісті тәждер.", en: "Alloy steel gear rims for ball mills, drum kilns and other rotating equipment." },
+    specs: [
+      { label: { ru: "Диаметр", kz: "Диаметр", en: "Diameter" }, value: { ru: "2000-12000 мм", kz: "2000-12000 мм", en: "2000-12000 mm" } },
+      { label: { ru: "Модуль", kz: "Модуль", en: "Module" }, value: { ru: "10-40", kz: "10-40", en: "10-40" } },
+    ],
+    tags: ["венец", "зубчатый", "мельница", "привод"], image: "/images/products/gear-rims.jpg",
+  },
+  {
+    id: "eq-013", slug: "refractory-products", categoryId: "equipment",
+    name: { ru: "Огнеупорные изделия", kz: "Отқа төзімді бұйымдар", en: "Refractory Products" },
+    shortDescription: { ru: "Огнеупоры для печей и ковшей", kz: "Пештер мен шөміштерге арналған отқа төзімділер", en: "Refractories for furnaces and ladles" },
+    description: { ru: "Огнеупорные кирпичи, массы и изделия для футеровки плавильных печей, ковшей и конвертеров.", kz: "Балқыту пештерінің, шөміштер мен конвертерлердің футеровкасына арналған отқа төзімді кірпіштер, массалар мен бұйымдар.", en: "Refractory bricks, masses and products for lining smelting furnaces, ladles and converters." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Шамотные, хромомагнезитовые, корундовые", kz: "Шамотты, хроммагнезитті, корундты", en: "Fireclay, chrome-magnesite, corundum" } },
+      { label: { ru: "Огнеупорность", kz: "Отқа төзімділік", en: "Refractoriness" }, value: { ru: "1580-1800°C", kz: "1580-1800°C", en: "1580-1800°C" } },
+    ],
+    tags: ["огнеупор", "кирпич", "футеровка", "печь"], image: "/images/products/refractory.jpg",
+  },
+  {
+    id: "eq-014", slug: "motor-reducers", categoryId: "equipment",
+    name: { ru: "Мотор-редукторы", kz: "Мотор-редукторлар", en: "Motor Reducers" },
+    shortDescription: { ru: "Привод для конвейеров и промышленных механизмов", kz: "Конвейерлер мен өнеркәсіптік механизмдерге арналған жетек", en: "Drive for conveyors and industrial mechanisms" },
+    description: { ru: "Мотор-редукторы различных типов для привода конвейеров, мешалок и другого промышленного оборудования.", kz: "Конвейерлерді, араластырғыштарды және басқа өнеркәсіптік жабдықтарды жетектеуге арналған әртүрлі типтегі мотор-редукторлар.", en: "Motor reducers of various types for driving conveyors, mixers and other industrial equipment." },
+    specs: [
+      { label: { ru: "Тип", kz: "Түрі", en: "Type" }, value: { ru: "Цилиндрические, червячные, планетарные", kz: "Цилиндрлік, бұрамалы, планетарлы", en: "Cylindrical, worm, planetary" } },
+      { label: { ru: "Мощность", kz: "Қуат", en: "Power" }, value: { ru: "0.12-200 кВт", kz: "0.12-200 кВт", en: "0.12-200 kW" } },
+    ],
+    tags: ["мотор-редуктор", "редуктор", "привод"], image: "/images/products/motor-reducers.jpg",
+  },
+]
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find((p) => p.slug === slug)
+}
+
+export function getProductsByCategory(categoryId: string): Product[] {
+  return products.filter((p) => p.categoryId === categoryId)
+}
+
+export function getRelatedProducts(product: Product, limit = 4): Product[] {
+  return products
+    .filter((p) => p.id !== product.id && p.categoryId === product.categoryId)
+    .slice(0, limit)
+}
