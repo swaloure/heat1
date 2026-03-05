@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/heat1',
+  // basePath: '/heat1',
   typescript: {
     ignoreBuildErrors: true,
   },
