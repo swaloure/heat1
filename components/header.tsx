@@ -49,6 +49,7 @@ export function Header() {
         {/* Actions */}
         <div className="flex items-center gap-3">
           {/* Language switcher */}
+          {/* 
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
@@ -84,6 +85,7 @@ export function Header() {
               )}
             </AnimatePresence>
           </div>
+          */}
 
           {/* CTA */}
           <Link
